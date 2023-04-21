@@ -8,16 +8,35 @@
 #include "Sprite.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
+#include"DebugCamera.h"
 
 /// <summary>
 /// ゲームシーン
 /// </summary>
 class GameScene {
+	// テキストハンドル
+	uint32_t textureHandole_ = 0;
+	Sprite* sprite_ = nullptr;
+	Model* model_ = nullptr;
+	// デバックカメラ
+	DebugCamera* debgCamera_ = nullptr;
+	WorldTransform worldTransform_;
+	ViewProjection viewProjection_;
+
+	//サウンドデータハンドル
+	uint32_t soundDataHandle_ = 0;
+	uint32_t voiceHandle_ = 0;
+	//ImGuiで値を入力する変数
+	float inputFloat3[3] = {0, 0, 0};
+
+	
 
 public: // メンバ関数
 	/// <summary>
 	/// コンストクラタ
 	/// </summary>
+	
+	
 	GameScene();
 
 	/// <summary>
